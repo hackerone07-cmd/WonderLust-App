@@ -11,6 +11,8 @@ mongoose.connect('mongodb://localhost:27017/wonderLust', {
   console.log("✅ Connected to MongoDB");
 
   await Listing.deleteMany({});
+ 
+
   await Listing.insertMany(sampleList);
 
   console.log("🌱 Sample listings inserted");

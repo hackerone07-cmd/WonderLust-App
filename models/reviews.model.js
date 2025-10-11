@@ -10,6 +10,10 @@ import mongoose from "mongoose";
         max:5
        },
        comment: String,
+       author:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+       }
  } ,{timestamps: true})
 
 export const Review = mongoose.model("Review",reviewSchema);

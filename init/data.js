@@ -6,7 +6,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 250000,
     location: "Zermatt",
-    country: "Switzerland"
+    country: "Switzerland",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Modern City Loft",
@@ -14,7 +15,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c" ,
     price: 750000,
     location: "Manhattan, New York",
-    country: "USA"
+    country: "USA",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Vintage Volkswagen Beetle",
@@ -22,7 +24,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 18000,
     location: "Berlin",
-    country: "Germany"
+    country: "Germany",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Tesla Model Y Performance",
@@ -30,7 +33,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 58000,
     location: "San Francisco",
-    country: "USA"
+    country: "USA",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Scandinavian Oak Dining Set",
@@ -38,7 +42,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 1200,
     location: "Stockholm",
-    country: "Sweden"
+    country: "Sweden",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Handcrafted Rajasthani Sofa",
@@ -46,7 +51,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 45000,
     location: "Jaipur",
-    country: "India"
+    country: "India",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "MacBook Pro M3 (2025)",
@@ -54,7 +60,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 2199,
     location: "Toronto",
-    country: "Canada"
+    country: "Canada",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Samsung Galaxy Z Fold 6",
@@ -62,7 +69,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 1799,
     location: "Seoul",
-    country: "South Korea"
+    country: "South Korea",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Abstract Canvas by Local Artist",
@@ -70,7 +78,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 350,
     location: "Melbourne",
-    country: "Australia"
+    country: "Australia",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Moroccan Hanging Lantern",
@@ -78,7 +87,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 80,
     location: "Marrakech",
-    country: "Morocco"
+    country: "Morocco",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Beachfront Bungalow",
@@ -86,7 +96,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 320000,
     location: "Goa",
-    country: "India"
+    country: "India",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Tokyo Micro Apartment",
@@ -94,7 +105,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 210000,
     location: "Tokyo",
-    country: "Japan"
+    country: "Japan",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Parisian Studio",
@@ -102,7 +114,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 450000,
     location: "Paris",
-    country: "France"
+    country: "France",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Dubai Sky Villa",
@@ -110,7 +123,8 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 2200000,
     location: "Dubai",
-    country: "UAE"
+    country: "UAE",
+    owner: "68e7f0bc40d1461c5feb1640",
   },
   {
     title: "Cape Town Cliff House",
@@ -118,6 +132,7 @@ export const sampleList = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     price: 980000,
     location: "Cape Town",
-    country: "South Africa"
+    country: "South Africa",
+    owner: "68e7f0bc40d1461c5feb1640",
   }
 ];
