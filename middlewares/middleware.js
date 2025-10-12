@@ -61,28 +61,28 @@ const isReviewAuthor = async(req,res,next)=>{
    }
 next();
 }
-// const isLoggedInEdit = (req,res,next) =>{
-//     if(!req.isAuthenticated()){
-//     req.flash("error",`you must be logged in to Edit listings`);
-//     return res.redirect("/login");
+const isLoggedInEdit = (req,res,next) =>{
+    if(!req.isAuthenticated()){
+    req.flash("error",`you must be logged in to Edit listings`);
+    return res.redirect("/login");
 
-//    }
-//    next();
+   }
+   next();
 
-// }
-// const isLoggedInDelete = (req,res,next) =>{
-//     if(!req.isAuthenticated()){
-//     req.flash("error",`you must be logged in to Delete listings`);
-//     return res.redirect("/login");
+}
+const isLoggedInDelete = (req,res,next) =>{
+    if(!req.isAuthenticated()){
+    req.flash("error",`you must be logged in to Delete reviews`);
+    return res.redirect("/login");
 
-//    }
-//    next();
+   }
+   next();
 
-// }
+}
 
 export {isLoggedIn,
-// isLoggedInEdit,
-// isLoggedInDelete,
+isLoggedInEdit,
+isLoggedInDelete,
 saveRedirectUrl,
 isOwner,
 validateListing,
