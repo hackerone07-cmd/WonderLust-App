@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config(); 
+
 import mongoose from 'mongoose';
 import express from 'express';
 import path from 'path';
@@ -5,7 +8,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import methodOverride from 'method-override';
 import ejsMate from 'ejs-mate';
-import session, { Cookie } from 'express-session';
+import session from 'express-session';
 import flash from "connect-flash";
 import passport from "passport";
 import LocalStrategy from "passport-local";
@@ -56,9 +59,9 @@ const sessionOptions={
 
 
 // Route
-app.get("/", (req, res) => {
-  res.send("welcome home");// Make sure views/home.ejs exists
-});
+// app.get("/", (req, res) => {
+//   res.send("welcome home");// Make sure views/home.ejs exists
+// });
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -87,8 +90,12 @@ app.use((err, req, res, next) => {
   let { statusCode = 500, message = "Something went wrong" } = err;
   res.status(statusCode).render("error.ejs", { err });
 });
-
+ 
+// app.use("*",(req,res)=>{
+    
+// })
+const port = process.env.PORT || 8080;
 // Server
-app.listen(8080, () => {
-  console.log("Server is running at port 8080");
+app.listen(port, () => {
+  console.log(`Server is running at port ${port}`);
 });

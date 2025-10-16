@@ -29,17 +29,27 @@ let listing = await Listing.findById(id)
   res.render("listings/show.ejs",{listing});
 }
 
-const createListings = async(req,res,next)=>{
-    let result = listingSchema.validate(req.body);
-    if(result.error){
-      throw new ExpressError(404,result.error);
+const createListings = async (req, res, next) => {
+  try {
+    const newListing = new Listing(req.body.listing);
+
+    //using Multer with CloudinaryStorage
+    if (req.file) {
+      newListing.image = {
+        url: req.file.path,       // Cloudinary give .path
+        filename: req.file.filename,
+      };
     }
-    const newListing = new Listing(req.body.listing); 
+  console.log(newListing);
     newListing.owner = req.user._id;
     await newListing.save();
-    req.flash("success","New Listing Created");
+
+    req.flash("success", "New Listing Created");
     res.redirect("/listings");
-}
+  } catch (err) {
+    next(err);
+  }
+};
 
 const renderEditForm = async(req,res)=>{
    let {id} = req.params;
@@ -48,7 +58,9 @@ const renderEditForm = async(req,res)=>{
     req.flash("error","Listing you requested for does not exist");
    return res.redirect("/listings");
   }
-  res.render("listings/edit.ejs",{listing});
+  let originalImageUrl = listing.image.url;
+  originalImageUrl =originalImageUrl.replace("/upload","/upload/w_150");
+  res.render("listings/edit.ejs",{listing, originalImageUrl});
 }
 const updateListing  =async(req,res)=>{
   if(!req.body.listing){
@@ -56,7 +68,14 @@ const updateListing  =async(req,res)=>{
   }
    let {id}  =req.params;
   
-  await Listing.findByIdAndUpdate(id,{...req.body.listing});
+ let newListing =  await Listing.findByIdAndUpdate(id,{...req.body.listing});
+  if (typeof req.file !=="undefined") {
+      newListing.image = {
+        url: req.file.path,       // Cloudinary give .path
+        filename: req.file.filename,
+      };
+      await newListing.save();
+    }
   req.flash("success","Listing Updated!");
   res.redirect(`/listings/${id}`);    
 }
