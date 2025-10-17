@@ -1,5 +1,5 @@
 import { Listing} from "../models/listing.model.js";
-import { listingSchema } from "../schema.js";
+
 import ExpressError from "../utils/ExpressError.js";
 
 const index = async(req,res)=>{
